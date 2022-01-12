@@ -1,31 +1,44 @@
 import styled from '@emotion/styled'
-
+import html from '../assets/icons/html.svg'
+import css from '../assets/icons/css.svg'
+import php from '../assets/icons/php.svg'
+import js from '../assets/icons/js.svg'
+import reacticon from '../assets/icons/reacticon.png'
+import mysql from '../assets/icons/mysql.svg'
+import nodejs from '../assets/icons/nodejs.svg'
+import premierepro from '../assets/images/premierepro.png'
+import figma from '../assets/images/figma.png'
+import notion from '../assets/images/notion.png'
+import sql from '../assets/images/sql.png'
+import imovie from '../assets/images/imovie.png'
+import whimsical from '../assets/images/whimsical.png'
+import canva from '../assets/images/canva.png'
 
 
 const Skills = () => {
 
     const Frontend = [
-        { programmation : 'HTML'},
-        { programmation : 'PHP'},
-        { programmation : 'CSS'},
-        { programmation : 'Javascript'},
-        { programmation : 'React'},
+        { programmation : 'HTML', icons : html, width : '30px'},
+        { programmation : 'PHP', icons : php, width : '35px'},
+        { programmation : 'CSS', icons : css, width : '30px'},
+        { programmation : 'Javascript', icons : js, width : '30px'},
+        { programmation : 'React', icons : reacticon, width : '30px'},
     ]
     
     const Backend = [
-        { programmation : 'MYSQL'},
-        { programmation : 'NodeJS'},
-        { programmation : 'ExpressJS'},
+        { programmation : 'SQL', icons : sql, width : '30px'},
+        { programmation : 'MySQL', icons : mysql, width : '35px'},
+        { programmation : 'NodeJS', icons : nodejs, width : '35px'},
+
     ]
 
     const creativeTools = [
-        { tools : 'iMovie'},
-        { tools : 'Sony Vegas Pro',},
-        { tools : 'Adobe Premiere Pro'},
-        { tools : 'Canva'},
-        { tools : 'Figma'},
-        { tools : 'Whimsical'},
-        { tools : 'Notion.so'}
+        { tools : 'iMovie', icons : imovie, width : '30px'},
+        { tools : 'Adobe Premiere Pro', icons : premierepro, width : '30px'},
+        { tools : 'Canva', icons : canva, width : '30px'},
+        { tools : 'Figma', icons : figma, width : '30px'},
+        { tools : 'Whimsical', icons : whimsical, width : '30px'},
+        { tools : 'Notion.so', icons : notion, width : '30px'}
     ]
 
     const SkillsComplementary = [
@@ -33,12 +46,6 @@ const Skills = () => {
         { complementary : 'SEO'},
         { complementary : 'SEA'},
         { complementary : 'Communication'}
-    ]
-
-    const Languages = [
-        { language : 'French : Fluent'},
-        { language : 'English : B1-B2'},
-        { language : 'Spanish : A2'}
     ]
 
 
@@ -60,37 +67,40 @@ const Skills = () => {
             <div className="Line"></div>
             
                 <div className="Skills-a">
-                    <div className="title">
-                        <h2>Programmations</h2>
-                    </div>
+                    <div className="marginbook">
                     <div className="Skillss">
-                        <h2>Front-End</h2>
+                        <div className="title">
+                            <h2>Front-End</h2>
+                        </div>
+                        
                         <ul>
-                            {Frontend.map(({programmation})=> {
+                            {Frontend.map(({programmation, icons, width})=> {
                                 return(
-                                    <li>{programmation}</li>
+                                    <li><img src={icons} width={width} />{programmation}</li>
                                 )
                             })}
                         </ul>
                     </div>
                     <div className="Skillss">
-                        <h2>Back-End</h2>
+                        <div className="title">
+                            <h2>Back-End</h2>
+                        </div>
+                        
                             <ul>
-                                {Backend.map(({programmation})=> {
+                                {Backend.map(({programmation, icons, width})=> {
                                 return(
-                                    <li>{programmation}</li>
+                                    <li><img src={icons} width={width} />{programmation}</li>
                                 )
                             })}
                             </ul>
                         </div>
                     </div>
+                    </div>
+                   
                 
                
                 <div className="Skills-b">
-                    <div className="title">
-                        <h2>Others</h2>
-                    </div>
-                        
+                    <div className="marginbook">
                     <div className="Skillss">
                         <h2>Complementary</h2>
                         <ul>
@@ -103,27 +113,22 @@ const Skills = () => {
                     </div>
 
                     <div className="Skillss">
-                        <h2>Creative Tools</h2>
+                        <div className="title">
+                            <h2>Creative Tools</h2>
+                        </div>
+                        
                         <ul>
-                            {creativeTools.map(({tools})=> {
+                            {creativeTools.map(({tools, icons, width})=> {
                                 return(
-                                    <li>{tools}</li>
+                                    <li><img src={icons} width={width}/>{tools}</li>
                                 )
                             })}
                         </ul>
                     </div>
+                    </div>
+                    
 
-                    <div className="Skillss">
-                        <h2>Languages</h2>
-                        <ul>
-                            {Languages.map(({language})=> {
-                                return(
-                                    <li>{language}</li>
-                                )
-                            })}
-                        </ul>
-                        <div class="empty"></div>
-                    </div>
+                   
                     
                 </div>
                             
@@ -155,17 +160,25 @@ const TextContent = styled.div`
     }
     .titleSkills h2{
         color : rgb(58,143,211);
-        padding-bottom : 1em;
-        border-bottom : 2px solid rgb(58,143,211);
+        font-size : 4em;
+        letter-spacing : 5px;
     }
     .MySkills{
+        -moz-user-select: none; 
+        -webkit-user-select: none; 
+        -ms-user-select: none;
+        user-select: none;
+        margin-top : 4em;
         display : flex;
         justify-content : center;
         background-color : rgba(99, 82, 61, 0.753);
         border-left : 1px solid black;
         border-right : 1px solid black;
         height : 100%;
-        width : 75%;
+        width : 68%;
+    }
+    .MySkills h2{
+        font-weight : 300;
     }
     .Skills-a{
         background-color : white;
@@ -192,47 +205,94 @@ const TextContent = styled.div`
         display : flex;
         flex-direction : column;
         align-item : center;
-        margin-top : 1em;
+    
     }
     .Skillss h2{
+        margin : unset;
+        margin-top : 2em;
         text-align : center;
+        color : rgba(99, 82, 61, 0.753);
     }
     .Skillss ul{
+        margin : unset;
+        margin-top : 2em;
+        margin-bottom : 2em;
         display : flex;
         align-item : center;
         justify-content : center;
         flex-wrap : wrap;
-        margin-right : 2em;
+        padding : unset;
         margin-left : 2em;
+        margin-right : 2em;
     }
     .Skillss li{
-        margin : 0.3em;
+        display : flex;
+        align-items : center;
+        margin : 0.45em;
         display : flex;
         align-item : center;
-        justify-content : center;
         list-style-type : none;
-        border-radius : 50px;
-        color : white;
-        background-color : rgb(58,143,211);
-        padding : 0.5em 1em 0.5em 1em;
+        color : #E74C3C;
+        background-color : #f5f5f5;
+        padding : 0.25em 1em 0.25em 1em;
         box-shadow : 0.3em 0em 0.2em lightgrey;
     }
+    .Skillss li img{
+        margin-right : 0.4em;
+    }
     .Skillss li:hover{
-        background-color : white;
-        box-shadow : 0 0 0.7em grey;
-        color : black;
+        transform : scale(1.25);
+        transition : 0.2s;
     }
     .title{
         text-align : center;
         margin-top : 0em;
-        font-size : 1.5em;
     }
     .Line{
         width : 1.25%;
-        box-shadow : 0 0 0.3em;
+        box-shadow : 0 0 0.3em lightgrey;
         background-color : white;
     }
     .empty{
         margin-top : 5em;
+    }
+    .marginbook{
+        margin-bottom : 1em;
+    }
+    @media (min-width : 1360px){
+        .MySkills{
+            width : 60%;
+        }
+    }
+    @media (min-width : 1800px){
+        .MySkills{
+            width : 50%;
+        }
+    }
+    @media (max-width : 1190px){
+        .MySkills{
+            background-color : unset;
+            flex-direction : column;
+            width : 90%;
+            border : unset;
+            border-radius
+        }
+        .Skills-a{
+            width : 100%;
+            margin-bottom : 2em;
+            border-top-right-radius : unset;
+            border-bottom-right-radius: unset;
+            border-radius : 20px;
+        }
+        .Skills-b{
+            width : 100%;
+            border-top-left-radius: unset;
+            border-bottom-left-radius : unset; 
+            border-radius : 20px;
+        }
+        .Skillss ul{
+
+            margin-bottom : 2em;
+        }
     }
 `

@@ -71,8 +71,7 @@ const About = () => {
                         </ul>
                     )
                 })}
-            </div>
-            
+            </div>      
         </TextContent>
     )
 }
@@ -95,8 +94,9 @@ const TextContent = styled.div`
 }
 .About h2{
     color : rgb(58,143,211);
-    padding-bottom : 1em;
-    border-bottom : 2px solid rgb(58,143,211);
+    font-size : 4em;
+    letter-spacing : 5px;
+
 }
 .About p{
     font-size : 1.1em;
@@ -135,7 +135,7 @@ const TextContent = styled.div`
     color : rgb(58,143,211);
 }
 .Proceed ul{
-    box-shadow : 0em 0em 0.7em grey;
+    box-shadow : 0em 0em 0.7em lightgrey;
     padding : 1em;
     border-radius : 10px;
     width : 50%;
@@ -149,4 +149,14 @@ const TextContent = styled.div`
     background-color : transparent;
     transition : 0.2s;
 }
+
+@media (max-width : 600px){
+    .About p{
+        width : 85%;
+    }
+    .Proceed ul{
+        width : 70%;
+    }
+}
+
 `

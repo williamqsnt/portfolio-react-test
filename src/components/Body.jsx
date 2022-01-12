@@ -19,19 +19,17 @@ const Body = () => {
             socialMedia : github,
             alt : 'My Github williamqsnt'
         }
-    ]
-
+    ];
 
     return(
         <BodyDiv>
             <div className="Presentation">
                 <h1> 
-                    
                     <code>&lt;</code><span>Job</span><code>&gt;</code> &nbsp;
                     Front-end Developer &nbsp;
                     <code>&lt;</code><span>/Job</span><code>&gt;</code>
-                    </h1>
-                <img src={pp} alt="My profile photo" width='150' height='150'></img>
+                </h1>
+                <img src={pp} alt="My profile photo" width='150' height='150'/>
                 <div className="description">
                     <p>
                         <code>&lt;</code><span>p</span><code>&gt;</code> Welcome, I'm William Quesnot. <br/> Front-end developer from Lyon in France. <br /> Nice to meet you <code>&lt;</code><span>/p</span><code>&gt;</code> 
@@ -47,10 +45,9 @@ const Body = () => {
                 
             </div>
 
-           
-                <div className='Footer'>
-                    <img src={arrowDown} width='50'></img>
-                </div>
+            <div className='Footer'>
+                <img src={arrowDown} width='50'></img>
+            </div>
             
            
         </BodyDiv>
@@ -68,6 +65,10 @@ const BodyDiv = styled.div`
     .Presentation img{
         border-radius : 50%;
         box-shadow:  2px 2px 4px grey;
+        -moz-user-select: none; 
+        -webkit-user-select: none; 
+        -ms-user-select: none;
+        user-select: none;
     }
     .Presentation img:hover{
         transform : scale(1.05);
@@ -120,6 +121,26 @@ const BodyDiv = styled.div`
         display : flex;
         align-items : center;
         justify-content : center;
+    }
+
+    @media (max-width : 600px){
+        .Presentation h1{
+            font-size : 1.5em;
+        }
+    }
+
+    @media (max-width : 415px){
+        .Presentation h1{
+            font-size : 1.45em;
+        }
+    }
+    @media (max-width : 390px){
+        code{
+            display : none;
+        }
+        span{
+            display : none;
+        }
     }
 `
 
