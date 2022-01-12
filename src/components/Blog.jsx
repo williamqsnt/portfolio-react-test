@@ -35,15 +35,15 @@ const Blog = ()=> {
                     return(
                         <Content>
 
-                        <a href={url} target='_blank'>
+                        <a href={url} target='_blank' rel="noreferrer">
                             <div className="contentBlock">
                             <div className="topBlock">
-                                <img src={js} width='50px'/>
+                                <img src={js} width='50px' alt="a coder"/>
                             <h2>{title}</h2>
                             </div>
                             <div className="bodyBlock">
                                 <h3>{desc}</h3>
-                                <img src={img} width='100%'/>
+                                <img src={img} width='100%'alt="the coding" />
                             </div>
                             </div>
                         </a>

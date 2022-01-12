@@ -42,7 +42,7 @@ const About = () => {
                 <h2>About me</h2>
                 <p>
                 My name is William Quesnot. I did a scientific baccalaureate. Then, I did a Google distance training in digital 
-                marketing and I obtained the diploma  "<a href="https://learndigital.withgoogle.com/ateliersnumeriques/course/digital-marketing" target="_blank">The fundamentals of Digital Marketing</a>". <br /><br />
+                marketing and I obtained the diploma  "<a href="https://learndigital.withgoogle.com/ateliersnumeriques/course/digital-marketing" target="_blank" rel="noreferrer">The fundamentals of Digital Marketing</a>". <br /><br />
                 Being passionate about new technologies and computers, I learned the JavaScript programming language on my own, often used in interactive web pages. Subsequently I combined it with HTML and CSS technologies to do web development.
                 I am currently in computer engineering school to perfect my knowledge and skills. <br /><br />
                 I am motivated and curious to learn new things. I want to develop my knowledge and skills in order to put them into practice in various projects and accomplish my professional goals.
@@ -50,7 +50,7 @@ const About = () => {
             </div>
             <div className="Proceed">
                 <div className="ProceedTop">
-                    <img src={coding} width='100'></img>
+                    <img src={coding} alt="imcoding" width='100'></img>
                 <h3>
                     <code>&lt;</code><span>Methods</span><code>&gt;</code> &nbsp;
                     How I proceed &nbsp;
@@ -63,7 +63,7 @@ const About = () => {
                         <ul>
                             <li>
                                 <div className="ProceedTitle">
-                                    <img src={img} width='50'></img>
+                                    <img src={img} width='50' alt="a title"></img>
                                     <h3>{title}</h3>
                                 </div>
                                 <p>{desc}</p>

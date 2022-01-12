@@ -29,7 +29,7 @@ const Body = () => {
                     Front-end Developer &nbsp;
                     <code>&lt;</code><span>/Job</span><code>&gt;</code>
                 </h1>
-                <img src={pp} alt="My profile photo" width='150' height='150'/>
+                <img src={pp} alt="the code" width='150' height='150'/>
                 <div className="description">
                     <p>
                         <code>&lt;</code><span>p</span><code>&gt;</code> Welcome, I'm William Quesnot. <br/> Front-end developer from Lyon in France. <br /> Nice to meet you <code>&lt;</code><span>/p</span><code>&gt;</code> 
@@ -46,7 +46,7 @@ const Body = () => {
             </div>
 
             <div className='Footer'>
-                <img src={arrowDown} width='50'></img>
+                <img src={arrowDown} width='50' alt="arrow"></img>
             </div>
             
            

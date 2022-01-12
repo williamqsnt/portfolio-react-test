@@ -1,6 +1,5 @@
 
 import styled from '@emotion/styled'
-import { useState } from 'react'
 import Learn from '../assets/images/Learn.jpg'
 import Homely from '../assets/images/Homely.jpg'
 import Petqo from '../assets/images/Petqo.jpg'
@@ -62,7 +61,7 @@ const Projects = () => {
                         return(
                             <div className="eachProjects" style={{background: `url(${background})`}}>
                                 
-                                <a href={url} target='_blank' className="eachButton">View the project</a>
+                                <a href={url} target='_blank' className="eachButton" rel="noreferrer">View the project</a>
                             </div>
                         )
                     })}

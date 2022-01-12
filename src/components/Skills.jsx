@@ -76,7 +76,7 @@ const Skills = () => {
                         <ul>
                             {Frontend.map(({programmation, icons, width})=> {
                                 return(
-                                    <li><img src={icons} width={width} />{programmation}</li>
+                                    <li><img src={icons} width={width} alt="programmation"/>{programmation}</li>
                                 )
                             })}
                         </ul>
@@ -89,7 +89,7 @@ const Skills = () => {
                             <ul>
                                 {Backend.map(({programmation, icons, width})=> {
                                 return(
-                                    <li><img src={icons} width={width} />{programmation}</li>
+                                    <li><img src={icons} width={width} alt="another programmation" />{programmation}</li>
                                 )
                             })}
                             </ul>
@@ -120,7 +120,7 @@ const Skills = () => {
                         <ul>
                             {creativeTools.map(({tools, icons, width})=> {
                                 return(
-                                    <li><img src={icons} width={width}/>{tools}</li>
+                                    <li><img src={icons} width={width} alt="tools"/>{tools}</li>
                                 )
                             })}
                         </ul>

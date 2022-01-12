@@ -47,7 +47,7 @@ const Contact = () =>{
              <div class="FormsSuccess">
              
             <div class="Message">
-                <h2>Your message has been sent.<br/> Thanks, see you soon ! <img src={correct} width='20px'/></h2>
+                <h2>Your message has been sent.<br/> Thanks, see you soon ! <img src={correct} width='20px' alt="correct" /></h2>
                 <h3>Do you want to contact me once more? This is my email :</h3>
                 <a href="mailto:quesnot.william@hotmail.com">quesnot.william@hotmail.com</a>
             </div>
