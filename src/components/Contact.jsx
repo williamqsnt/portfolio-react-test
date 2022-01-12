@@ -8,7 +8,7 @@ const Contact = () =>{
     
    
     var Airtable = require('airtable');
-    var base = new Airtable({apiKey: process.env.REACT_APP_API_KEY}).base('appLonkibDKT9LuDB');
+    var base = new Airtable({apiKey: 'keyG3mWvlLfFyCAkc'}).base('appLonkibDKT9LuDB');
   
   
     const [name, setName] = useState("")
