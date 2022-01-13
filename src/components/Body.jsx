@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import pp from '../assets/images/photo_William_QUESNOT.jpg'
 import linkedin from '../assets/images/linkedin.png'
 import github from '../assets/images/github.png'
-import arrowDown from '../assets/images/arrowDown.png'
+
 
 
 const Body = () => {
