@@ -49,13 +49,15 @@ const Projects = () => {
 
     
         <TextContent>
-                <div className="Projects">
-                <h2>Projects</h2>
-            </div>
+
                 <div className="AllProjects">
 
+                    <div className="Projects">
+                        <h2>Projects</h2>          
+                    </div>
 
-
+                    <div className="eprojects">
+  
                     {ManyProjects.map(({title,img, background, url}) => {
                       
                         return(
@@ -65,7 +67,9 @@ const Projects = () => {
                             </div>
                         )
                     })}
+                    </div>
                 </div>
+
             </TextContent>
         )
     
@@ -77,19 +81,30 @@ export default Projects
 
 
 const TextContent = styled.div`
+    *{
+        background-color : #161E54;
+    }
     .Projects{
+        margin-top : 2em;
         display : flex;
         align-items : center;
         justify-content : center;
+        background-color : #161E54;
     }
     .Projects h2{
-        color : rgb(58,143,211);
+        color : #FF9B6A;
         font-size : 4em;
         letter-spacing : 5px;
     
     }
     .AllProjects{
-        margin-top : 5em;
+      
+        display : flex;
+        justify-content : center;
+        flex-direction : column;
+        padding-bottom : 5em;
+    }
+    .eprojects{
         display : flex;
         justify-content : center;
         flex-wrap : wrap;
@@ -101,7 +116,7 @@ const TextContent = styled.div`
         width : 400px;
         margin : 1em;
         height : 400px;
-        box-shadow : 0 0 0.8em lightgrey;
+       
         transition : 0.5s;
     }
     .eachProjects:hover{
@@ -117,7 +132,6 @@ const TextContent = styled.div`
         display : flex;
         align-items : center;
         justify-content : center;
-        background-color : blue;
         border : none;
         color : transparent;
         font-size : 1.5em;
@@ -129,7 +143,7 @@ const TextContent = styled.div`
         display : flex;
         align-items : center;
         justify-content : center;
-        background-color : rgb(58,143,211);
+        background-color : #FF5151;
         border-radius : 50%;
         height : 40%;
         width : 40%;

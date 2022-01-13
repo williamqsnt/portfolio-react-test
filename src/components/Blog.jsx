@@ -73,7 +73,7 @@ const Content = styled.div`
  
 }
 .Blogs h2{
-    color : rgb(58,143,211);
+    color : #FF5151;
     font-size : 4em;
     letter-spacing : 5px;
 }
@@ -134,4 +134,3 @@ a{
 }
 
 `
-

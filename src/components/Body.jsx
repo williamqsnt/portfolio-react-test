@@ -20,14 +20,12 @@ const Body = () => {
             alt : 'My Github williamqsnt'
         }
     ];
-
+    
     return(
         <BodyDiv>
             <div className="Presentation">
-                <h1> 
-                    <code>&lt;</code><span>Job</span><code>&gt;</code> &nbsp;
-                    Front-end Developer &nbsp;
-                    <code>&lt;</code><span>/Job</span><code>&gt;</code>
+                <h1>       
+                    Front-end Developer
                 </h1>
                 <img src={pp} alt="the code" width='150' height='150'/>
                 <div className="description">
@@ -45,12 +43,11 @@ const Body = () => {
                 
             </div>
 
-            <div className='Footer'>
-                <img src={arrowDown} width='50' alt="arrow"></img>
-            </div>
+            
             
            
         </BodyDiv>
+        
     )
 }
 
@@ -61,6 +58,15 @@ const BodyDiv = styled.div`
     *{
         font-family : Arial;
         font-weight : lighter;
+     
+    }
+    .Presentation h1{
+        font-weight : bold;
+        font-size : 4em;
+        color : #FF9B6A;
+        letter-spacing : 3px;
+        transform:scaleY(1.2);
+        
     }
     .Presentation img{
         border-radius : 50%;
@@ -75,24 +81,18 @@ const BodyDiv = styled.div`
         transition : 0.5s;
     }
     .Presentation{
+        background : #161E54;
         display : flex;
         align-items : center;
         justify-content : center;
         flex-direction : column;
-        height : 80vh;
-    }
-    .Presentation code{
-        font-style : italic;
-        font-size : 1em;
-        color : grey;
-    }
-    .Presentation span{
-        color : rgb(58,143,211);
-        font-style : italic;
+        height : 90vh;
     }
     .socialMedias img{
         border-radius : unset;
         box-shadow : unset;
+        background-color : white;
+        border-radius : 10px;
         border : unset;
         width : 40px;
         margin : 1em 0.5em 0.5em 0.5em ; 
@@ -107,21 +107,19 @@ const BodyDiv = styled.div`
     .description p{
         font-size : 1.2em;
         text-align : center;
+        font-weight : lighter;
+        color : #FF9B6A;
     }
     .description code{
         font-style : italic;
         font-size : 1em;
-        color : grey;
+        color : #FF9B6A;
     }
     .description span{
-        color : rgb(58,143,211);
+        color : #FF9B6A;
         font-style : italic;
     }
-    .Footer{
-        display : flex;
-        align-items : center;
-        justify-content : center;
-    }
+
 
     @media (max-width : 600px){
         .Presentation h1{
@@ -131,7 +129,7 @@ const BodyDiv = styled.div`
 
     @media (max-width : 415px){
         .Presentation h1{
-            font-size : 1.45em;
+            font-size : 2em;
         }
     }
     @media (max-width : 390px){

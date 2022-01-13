@@ -6,6 +6,7 @@ import checked from '../assets/images/checked.webp'
 import delivery from '../assets/images/delivery.webp'
 import coding from '../assets/images/coding.webp'
 
+
 const About = () => {
 
     const Proceed = [

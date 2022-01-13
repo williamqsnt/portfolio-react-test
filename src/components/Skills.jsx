@@ -19,7 +19,6 @@ const Skills = () => {
 
     const Frontend = [
         { programmation : 'HTML', icons : html, width : '30px'},
-        { programmation : 'PHP', icons : php, width : '35px'},
         { programmation : 'CSS', icons : css, width : '30px'},
         { programmation : 'Javascript', icons : js, width : '30px'},
         { programmation : 'React', icons : reacticon, width : '30px'},
@@ -28,8 +27,8 @@ const Skills = () => {
     const Backend = [
         { programmation : 'SQL', icons : sql, width : '30px'},
         { programmation : 'MySQL', icons : mysql, width : '35px'},
+        { programmation : 'PHP', icons : php, width : '35px'},
         { programmation : 'NodeJS', icons : nodejs, width : '35px'},
-
     ]
 
     const creativeTools = [
@@ -152,6 +151,7 @@ const TextContent = styled.div`
         display : flex;
         align-items : center;
         justify-content : center;
+        padding-bottom : 5em;
     }
     .titleSkills {
         display : flex;
@@ -159,7 +159,7 @@ const TextContent = styled.div`
         justify-content : center;
     }
     .titleSkills h2{
-        color : rgb(58,143,211);
+        color : #FF5151;
         font-size : 4em;
         letter-spacing : 5px;
     }

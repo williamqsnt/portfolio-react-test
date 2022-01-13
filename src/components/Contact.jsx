@@ -1,14 +1,13 @@
 
 import styled from '@emotion/styled'
 import { useState } from 'react'
-import correct from '../assets/images/correct.png'
 
 const Contact = () =>{
 
     
    
     var Airtable = require('airtable');
-    var base = new Airtable({apiKey: 'keyG3mWvlLfFyCAkc'}).base('appLonkibDKT9LuDB');
+    var base = new Airtable({apiKey: process.env.REACT_APP_API_KEY }).base('appLonkibDKT9LuDB');
   
   
     const [name, setName] = useState("")
@@ -47,7 +46,7 @@ const Contact = () =>{
              <div class="FormsSuccess">
              
             <div class="Message">
-                <h2>Your message has been sent.<br/> Thanks, see you soon ! <img src={correct} width='20px' alt="correct" /></h2>
+                <h2>Your message has been sent.<br/> Thanks, see you soon !</h2>
                 <h3>Do you want to contact me once more? This is my email :</h3>
                 <a href="mailto:quesnot.william@hotmail.com">quesnot.william@hotmail.com</a>
             </div>
@@ -88,24 +87,29 @@ const Contact = () =>{
 export default Contact
 
 const FormsMessage = styled.div`
+    *{
+        background-color : #161E54;
+    }
     .FormsSuccess{
        display : flex;
        justify-content :center;
        align-items : center;
        height : 100%;
        width : 100%;
-       margin-bottom : 10em;
+       padding-bottom : 10em;
     }
     .Message h3{
         font-weight : 400;
         margin-left : 1em;
         margin-right : 1em;
+        color : #FF5151;
     }
     .Message{
+        margin-top : 5em;
         text-align : center;
     }
     .Message a{
-        color : rgb(58,143,211);
+        color : #FF9B6A;
     }
     .Message h2{
         position : fixed;
@@ -116,9 +120,9 @@ const FormsMessage = styled.div`
         font-weight : 400;
         padding : 0.5em;
         opacity : 0.8;
-        color : white;
-        animation : goodmsg 3s forwards;
-        background-color : rgb(58,143,211);
+        color : #161E54;
+        animation : goodmsg 4s forwards;
+        background-color : #FF5151;
         border-radius : 10px;
        
         
@@ -126,19 +130,21 @@ const FormsMessage = styled.div`
    
     @keyframes goodmsg{
         0%{opacity : 0}
-        30%{opacity : 0.7}
-        50%{opacity : 0.7}
-        90%{opacity : 0.7}
+        30%{opacity : 1}
+        50%{opacity : 1}
+        90%{opacity : 1}
         100%{opacity : 0}
     }
 `
 
 const TextContent = styled.div`
+
     .Contact h3{
         margin-left : 1em;
         margin-right : 1em;
         text-align : center;
         font-weight : 400;
+        color : #FF5151;
         margin-bottom : 3em;
     }
     .Forms{
@@ -151,12 +157,12 @@ const TextContent = styled.div`
     form label{
         font-size : 1.5em;
         font-weight : 500;
-        color : rgb(58,143,211);
+        color : #FF9B6A;
     }
     form input{
         width : 100%;
         height : 30px;
-        margin-bottom : 0.5em;
+        margin-bottom : 1.5em;
         font-size : 1.5em;
     }
     .btn{
@@ -166,10 +172,10 @@ const TextContent = styled.div`
         margin : 1em;
         font-size : 1.5em;
         padding : 0.5em 3em 0.5em 3em;
-        background-color : rgb(58,143,211);
+        background-color : #FF5151;
         color : white;
         border : none;
-        box-shadow : 4px 4px 8px grey;
+
     }
     .btn button:hover{
         transform : scale(1.15);
@@ -181,10 +187,11 @@ const TextContent = styled.div`
         align-items : center;
         flex-direction : column;
         justify-content : center;
-        padding : 0 0 10em 0;
+        padding : 0 0 20em 0;
+        background-color : #161E54;
     }
     .Contact h2{
-        color : rgb(58,143,211);
+        color : #FF5151;
         font-size : 4em;
         letter-spacing : 5px;
     }

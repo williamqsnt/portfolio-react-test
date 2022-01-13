@@ -19,13 +19,13 @@ function App() {
 
         <Wrapper>
           
-      
+    
 
           <Menus>
               <div className="navFixed">
                   <div className="Navigations">
                       <div className="Menu">
-                          <h2>myPortfolio<span>(&nbsp;)</span></h2>
+                          <a href="#body"><h2>myPortfolio<span>(&nbsp;)</span></h2></a>
                       </div>
                 
 
@@ -44,12 +44,12 @@ function App() {
                   </div>
               </div>
               </div>
-
+                 
 
           </Menus>
 
-
-          <div className="Body">
+  
+          <div className="Body" id="body">
             <Body />
           </div>
            <div className="About" id="about">
@@ -82,14 +82,13 @@ const Wrapper = styled.div`
     margin-top : 3em;
   }
   .About{
-    margin-top : 10em;
+    margin-top : 2em;
   }
   .Skills{
     margin-top : 4em;
+    margin-bottom : 3em;
   }
-  .Projects{
-    margin-top : 10em;
-  }
+ 
   .Contact{
     margin-top : 10em;
   }
@@ -107,12 +106,11 @@ const Menus = styled.div`
     .Navigations{
         display : flex;
         justify-content : space-around;
-        box-shadow : 2px 2px 5px rgb(230, 230, 230);
+     
     }
     .Menu{
         display : flex;
         align-items : center;
-        color : rgb(58,143,211);
         font-style : italic;
     }
     .Menu span{
@@ -134,9 +132,10 @@ const Menus = styled.div`
         -ms-transition: all 0.2s ease; 
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease;
+        color : rgb(251,36, 18);
     }
     a{ 
-        color : black;
+      color : #FF5151;
         text-decoration : none;   
     }
     li:hover{
