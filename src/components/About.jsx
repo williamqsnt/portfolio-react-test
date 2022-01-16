@@ -4,6 +4,7 @@ import seo from '../assets/images/seo.webp'
 import code from '../assets/images/code.webp'
 import checked from '../assets/images/checked.webp'
 import delivery from '../assets/images/delivery.webp'
+import pp from '../assets/images/photo_William_QUESNOT.jpg'
 
 
 
@@ -13,27 +14,27 @@ const About = () => {
         {
             img : need,
             title : "Your need",
-            desc : 'Define your need, the nature of your site, what type of audience is your site aimed at? What is the purpose of your site?'
+            desc : 'Define your needs, the nature of your site, what type of audience is your site aimed at? What is the main purpose of your site ?'
         },
         {
             img : seo,
             title : "SEO",
-            desc : "Referencing your site is an important issue to increase its visibility with Internet users. It will be important for me to establish natural / paid SEO strategies, in order to apply them."
+            desc : "The referencing of your site is an important issue to increase its visibility among Internet users. It will be important for me to establish SEO strategies, in order to apply them and place you at the top of the ranking."
         },
         {
             img : code,
             title : "The conception",
-            desc : "After our discussion on your project, I will move on to the design of your website with regular monitoring. Subsequently, I will set up a tree structure in order to do SEO work."
+            desc : "After our discussion on your project, I will move on to the design of your website with regular monitoring by applying SEO strategies at the same time."
         },
         {
             img : checked,
             title : "Test",
-            desc : "Carrying out the testing phase will ensure that all elements are functioning perfectly. This is an important final step to avoid all types of mistakes."
+            desc : "Performing the test phase will ensure that all the elements work perfectly. This is an important final step to avoid all types of errors."
         },
         {
             img : delivery,
             title : "Delivery",
-            desc : "We have arrived at the realization of your order. The website is given to you, as well as with the possibility of keeping in touch with me to solicit me for other projects!"
+            desc : "We have arrived at the realization of your order. The site is delivered to you, as well as the possibility to stay in contact with me to solicit me for other projects !"
         }
     ]
 
@@ -41,6 +42,7 @@ const About = () => {
         <TextContent>
             <div className="About">
                 <h2>About me</h2>
+                <img src={pp} width='200' alt='logo' style={{borderRadius : '50%', marginBottom : '2em'}}/>
                 <p>
                 My name is William Quesnot. I did a scientific baccalaureate. Then, I did a Google distance training in digital 
                 marketing and I obtained the diploma  "<a href="https://learndigital.withgoogle.com/ateliersnumeriques/course/digital-marketing" target="_blank" rel="noreferrer">The fundamentals of Digital Marketing</a>". <br /><br />

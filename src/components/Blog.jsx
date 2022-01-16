@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import js from '../assets/icons/js.svg'
 import blog1 from '../assets/images/blog1.jpg'
+import blog2 from '../assets/images/blog2.jpg'
 
 const Blog = ()=> {
 
@@ -11,13 +12,13 @@ const Blog = ()=> {
             title : 'JAVASCRIPT',
             desc : 'How to create and use an Array?',
             img : blog1,
-            url : 'https://williamqsnt.github.io/blog-1-createAndUseArray/'
+            url : 'https://hashnode.com/post/how-to-create-and-use-an-array-ckyh5sxhy05gq24s174iuc4mo'
         },
         {
             title : 'JAVASCRIPT',
             desc : 'How to make a simple API calls with the fetch() method',
-            img : blog1,
-            url : 'https://williamqsnt.github.io/blog2-makeAnApiFetch/'
+            img : blog2,
+            url : 'https://hashnode.com/post/here-is-a-course-that-shows-how-to-make-a-simple-api-calls-with-the-fetch-method-in-javascript-ckyh617jm05je24s11u1p4dsw'
         }
     ]
 
@@ -43,7 +44,7 @@ const Blog = ()=> {
                             </div>
                             <div className="bodyBlock">
                                 <h3>{desc}</h3>
-                                <img src={img} width='100%'alt="the coding" />
+                                <img src={img} width='100%' height='60%' alt="the coding" />
                             </div>
                             </div>
                         </a>
@@ -94,10 +95,9 @@ const Content = styled.div`
     display : flex;
     align-items : center;
     justify-content : center;
-    border-top : 1px solid rgb(236,220,104);
-    border-bottom : 1px solid rgb(236,220,104);
     background-color : rgb(30,30,30);
 }
+
 a{
     text-decoration : none;
 }
@@ -107,9 +107,9 @@ a{
     flex-direction : column;
     align-items : center;
     justify-content : space-between;
-    border-top : 1px solid grey;
     background-color : rgb(30,30,30);
 }
+
 .contentBlock:hover{
     transform : scale(1.01);
     transition : 0.2s;
@@ -119,11 +119,11 @@ a{
     font-size: 27px;
     letter-spacing: 0px;
     color: #fff;
-    font-weight: 400;
+    font-weight: 200;
     text-decoration: none;
 }
 .bodyBlock h3:hover{
-    color : rgb(58,143,211)
+    color : #FF9B6A;
 }
 .contentBlock h2{
     text-align : center;

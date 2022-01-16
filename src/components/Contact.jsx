@@ -37,8 +37,10 @@ const Contact = () =>{
    
     }
   
-    
     const [Forms, updateForms] = useState(false)
+
+
+    const [inputs, setInputs] = useState({});
 
 
     return Forms ? (
@@ -65,12 +67,12 @@ const Contact = () =>{
                 
                     <div className="Forms">
                         <form>
-                            <label>Name</label>
-                            <input type='text' placeholder={name} onChange={e => setName(e.target.value)}/><br/>
-                            <label>Email</label>
-                            <input type='text' placeholder={email} onChange={e => setEmail(e.target.value)}/><br/>
-                            <label>Message</label>
-                            <input type='text' placeholder={message} onChange={e => setMessage(e.target.value)} style={{height : '150px'}}/> 
+                            <label for="name">Name</label>
+                            <input type='text' id="name" placeholder={name} onChange={e => setName(e.target.value)}/><br/>
+                            <label for="email">Email</label>
+                            <input type='text' id="email" placeholder={email} onChange={e => setEmail(e.target.value)} /><br/>
+                            <label for="message">Message</label>
+                            <input type='text' id="message" placeholder={message} onChange={e => setMessage(e.target.value)} style={{height : '150px'}}/> 
                             <div className="btn">
                             <button onClick={()=> {createData(name,email,message); updateForms(true)}}>Send</button></div>
                         </form>
@@ -144,8 +146,8 @@ const TextContent = styled.div`
         margin-right : 1em;
         text-align : center;
         font-weight : 400;
-        color : #FF5151;
-        margin-bottom : 3em;
+        color : #FF9B6A;
+        margin-bottom : 2em;
     }
     .Forms{
         width : 70%;

@@ -7,6 +7,8 @@ import Jobsa from '../assets/images/Jobsa.jpg'
 
 
 
+
+
 const Projects = () => {
 
 
@@ -42,8 +44,6 @@ const Projects = () => {
 
    
    
-
-
     
         return(
 
@@ -70,6 +70,10 @@ const Projects = () => {
                     </div>
                 </div>
 
+
+
+
+
             </TextContent>
         )
     
@@ -81,6 +85,27 @@ export default Projects
 
 
 const TextContent = styled.div`
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .carousel {
+    padding: 10px 10px 0;
+    border-radius: 4px;
+    width: 375px;
+    margin: auto;
+  }
+  .carousel__main {
+    border-radius: 4px;
+    height: 110px;
+  }
+  
+  .demo-item {
+    height: 110px;
+  }
+  
     *{
         background-color : #161E54;
     }
@@ -95,6 +120,7 @@ const TextContent = styled.div`
         color : #FF9B6A;
         font-size : 4em;
         letter-spacing : 5px;
+        margin-bottom : 1em;
     
     }
     .AllProjects{

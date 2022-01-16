@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import '../App.css';
 import { Body, About, Skills, Projects, Blog, Contact } from '../components'
-
-
+import logo from '../assets/icons/logo.png'
+import Carousel from './Carousel'
 
 function App() {
 
@@ -25,7 +25,7 @@ function App() {
               <div className="navFixed">
                   <div className="Navigations">
                       <div className="Menu">
-                          <a href="#body"><h2>myPortfolio<span>(&nbsp;)</span></h2></a>
+                          <a href="#body"><img src={logo} width='50' alt="logo" /></a>
                       </div>
                 
 
@@ -49,7 +49,7 @@ function App() {
           </Menus>
 
   
-          <div className="Body" id="body">
+          <div className="Body" id="body">            
             <Body />
           </div>
            <div className="About" id="about">
@@ -101,6 +101,7 @@ const Menus = styled.div`
       position : fixed;
       width : 100%;
       background-color : white;
+      box-shadow : 2px 2px 4px lightgrey;
       z-index : 1000;
     }
     .Navigations{
@@ -111,7 +112,6 @@ const Menus = styled.div`
     .Menu{
         display : flex;
         align-items : center;
-        font-style : italic;
     }
     .Menu span{
         color : black;

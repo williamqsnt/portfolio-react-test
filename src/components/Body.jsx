@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import pp from '../assets/images/photo_William_QUESNOT.jpg'
-import linkedin from '../assets/images/linkedin.png'
-import github from '../assets/images/github.png'
+import linkedin from '../assets/images/linkedin.svg'
+import github from '../assets/images/github.svg'
+import Carousel from './Carousel'
 
 
 
@@ -24,22 +24,36 @@ const Body = () => {
     return(
         <BodyDiv>
             <div className="Presentation">
-                <h1>       
-                    Front-end Developer
-                </h1>
-                <img src={pp} alt="the code" width='150' height='150'/>
-                <div className="description">
-                    <p>
-                        <code>&lt;</code><span>p</span><code>&gt;</code> Welcome, I'm William Quesnot. <br/> Front-end developer from Lyon in France. <br /> Nice to meet you <code>&lt;</code><span>/p</span><code>&gt;</code> 
-                    </p>
+
+                <div className="left">
+                                        <h1>FRONT-END</h1>
+                                        <h2>Developer</h2>
+                                        <div className="btn">
+                                            <a href="mailto:quesnot.william@hotmail.com" className="contactMe">CONTACT ME</a>
+                                            <a href="https://www.linkedin.com/in/william-quesnot-a23591223/"  target="_blank" rel="noreferrer" className="learnMore">LEARN MORE</a>
+                                        </div>
+                                       
+                                
+                                        <div className="socialMedias">
+                                            {socials.map(({link, socialMedia, alt})=>{
+                                                return(
+                                                    <a href={link} target='_blank' rel="noreferrer"><img src={socialMedia} alt={alt} ></img></a>
+                                                )
+                                            })}
+                                        </div>
+
                 </div>
-                <div className="socialMedias">
-                    {socials.map(({link, socialMedia, alt})=>{
-                        return(
-                            <a href={link} target='_blank' rel="noreferrer"><img src={socialMedia} alt={alt} ></img></a>
-                        )
-                    })}
+
+                <div className="right">
+
+                                    
+                        <Carousel />
+                                            
+
+
+
                 </div>
+               
                 
             </div>
 
@@ -60,41 +74,97 @@ const BodyDiv = styled.div`
         font-weight : lighter;
      
     }
-    .Presentation h1{
+    .right img{
+        border-radius : unset;
+        transform : unset;
+    }
+    .left{
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        flex-direction : column;
+        height : 100%;
+        width : 100%;
+    }
+    .contactMe{
+        margin-top : 2em;
+        background-color : #FF5151;
+        text-decoration : none;
+        padding : 1em 2em 1em 2em;
+        color : #161E54;
         font-weight : bold;
+        border-radius : 30px;
+        margin-right : 0.5em;
+        cursor : pointer;
+    }
+    .contactMe:hover{
+        color : white;
+    }
+    .learnMore{
+        margin-top : 2em;
+        background-color : transparent;
+        text-decoration : none;
+        padding : 1em 2em 1em 2em;
+        color : #FF5151;
+        font-weight : bold;
+        margin-left : 0.5em;
+        cursor : pointer;
+        border-radius : 30px;
+        border : 2px solid #FF5151;
+    }
+    .learnMore:hover{
+        background-color : #FF5151;
+        color : white;
+    }
+    .btn{
+        padding : 1em;
+        margin-top : 2em;
+    }
+    .right{
+        height : 100%;
+        width : 100%;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+    }
+    .Presentation h1{
+        padding : unset;
+        margin : unset;
+        font-weight : bold;
+        font-size : 5em;
+        color : #FF5151;
+        letter-spacing : 5px;
+        text-shadow : 4px 3px lightblue;
+    
+    }
+    .Presentation h2{
+        padding : unset;
+        margin : unset;
         font-size : 4em;
-        color : #FF9B6A;
+        color : #FF5151;
         letter-spacing : 3px;
-        transform:scaleY(1.2);
-        
     }
     .Presentation img{
-        border-radius : 50%;
-        box-shadow:  2px 2px 4px grey;
         -moz-user-select: none; 
         -webkit-user-select: none; 
         -ms-user-select: none;
         user-select: none;
-    }
-    .Presentation img:hover{
-        transform : scale(1.05);
-        transition : 0.5s;
     }
     .Presentation{
         background : #161E54;
         display : flex;
         align-items : center;
         justify-content : center;
-        flex-direction : column;
-        height : 90vh;
+        height : 100vh;
+    }
+    .socialMedias{
+        margin-top : 1em;
     }
     .socialMedias img{
         border-radius : unset;
         box-shadow : unset;
-        background-color : white;
-        border-radius : 10px;
         border : unset;
-        width : 40px;
+        width : 50px;
         margin : 1em 0.5em 0.5em 0.5em ; 
     }
     .socialMedias img:hover{
@@ -120,16 +190,37 @@ const BodyDiv = styled.div`
         font-style : italic;
     }
 
-
-    @media (max-width : 600px){
+    @media (max-width : 1025px){
         .Presentation h1{
-            font-size : 1.5em;
+            font-size : 4em;
+        }
+    }
+    @media (max-width : 835px){
+        .right{
+            display : none;
         }
     }
 
+    @media (max-width : 600px){
+        .Presentation{
+            flex-direction : column;
+        }
+        .Presentation h1{
+            
+        }
+       
+    }
+
+
     @media (max-width : 415px){
         .Presentation h1{
-            font-size : 2em;
+            font-size : 3em;
+        }
+        .Presentation h2{
+            font-size : 3em;
+        }
+        .btn a{
+            padding : 1em;
         }
     }
     @media (max-width : 390px){

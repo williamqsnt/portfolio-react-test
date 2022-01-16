@@ -6,14 +6,14 @@ import js from '../assets/icons/js.svg'
 import reacticon from '../assets/icons/reacticon.png'
 import mysql from '../assets/icons/mysql.svg'
 import nodejs from '../assets/icons/nodejs.svg'
-import premierepro from '../assets/images/premierepro.png'
 import figma from '../assets/images/figma.png'
 import notion from '../assets/images/notion.png'
 import sql from '../assets/images/sql.png'
-import imovie from '../assets/images/imovie.png'
 import whimsical from '../assets/images/whimsical.png'
 import canva from '../assets/images/canva.png'
-
+import python from '../assets/icons/python.png'
+import django from '../assets/icons/django.png'
+import mongodb from '../assets/icons/mongodb.png'
 
 const Skills = () => {
 
@@ -25,15 +25,21 @@ const Skills = () => {
     ]
     
     const Backend = [
-        { programmation : 'SQL', icons : sql, width : '30px'},
-        { programmation : 'MySQL', icons : mysql, width : '35px'},
+        { programmation : 'Nodejs', icons : nodejs, width : '35px'},
         { programmation : 'PHP', icons : php, width : '35px'},
-        { programmation : 'NodeJS', icons : nodejs, width : '35px'},
+        { programmation : 'Python', icons : python, width : '30px'},
+        { programmation : 'Django', icons : django, width : '35px'},
+    ]
+
+    const Database = [
+        { programmation : 'SQL', icons : sql, width : '30px'},
+        { programmation : 'MySQL', icons : mysql, width: '35px'},
+        { programmation : 'Mongodb', icons : mongodb, width : '35px'}
+
     ]
 
     const creativeTools = [
-        { tools : 'iMovie', icons : imovie, width : '30px'},
-        { tools : 'Adobe Premiere Pro', icons : premierepro, width : '30px'},
+
         { tools : 'Canva', icons : canva, width : '30px'},
         { tools : 'Figma', icons : figma, width : '30px'},
         { tools : 'Whimsical', icons : whimsical, width : '30px'},
@@ -93,7 +99,21 @@ const Skills = () => {
                             })}
                             </ul>
                         </div>
+                        <div className="Skillss">
+                        <div className="title">
+                            <h2>Database</h2>
+                        </div>
+                        
+                            <ul>
+                                {Database.map(({programmation, icons, width})=> {
+                                return(
+                                    <li><img src={icons} width={width} alt="another programmation" />{programmation}</li>
+                                )
+                            })}
+                            </ul>
+                        </div>
                     </div>
+                    
                     </div>
                    
                 
@@ -215,8 +235,8 @@ const TextContent = styled.div`
     }
     .Skillss ul{
         margin : unset;
-        margin-top : 2em;
-        margin-bottom : 2em;
+        margin-top : 1em;
+        margin-bottom : 1em;
         display : flex;
         align-item : center;
         justify-content : center;
