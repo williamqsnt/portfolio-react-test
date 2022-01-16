@@ -40,7 +40,6 @@ const Contact = () =>{
     const [Forms, updateForms] = useState(false)
 
 
-    const [inputs, setInputs] = useState({});
 
 
     return Forms ? (

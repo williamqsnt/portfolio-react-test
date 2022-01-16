@@ -14,6 +14,9 @@ import canva from '../assets/images/canva.png'
 import python from '../assets/icons/python.png'
 import django from '../assets/icons/django.png'
 import mongodb from '../assets/icons/mongodb.png'
+import netlify from '../assets/icons/netlify.jpg'
+import vscode from '../assets/icons/vscode.jpg'
+import github from '../assets/images/github.svg'
 
 const Skills = () => {
 
@@ -36,6 +39,12 @@ const Skills = () => {
         { programmation : 'MySQL', icons : mysql, width: '35px'},
         { programmation : 'Mongodb', icons : mongodb, width : '35px'}
 
+    ]
+
+    const DevTools = [
+        {programmation : 'VSCode', icons : vscode, width : '35px'},
+        {programmation : 'Github', icons : github, width: '35px'},
+        {programmation : 'Netlify', icons : netlify, width: '35px'}
     ]
 
     const creativeTools = [
@@ -121,17 +130,20 @@ const Skills = () => {
                 <div className="Skills-b">
                     <div className="marginbook">
                     <div className="Skillss">
-                        <h2>Complementary</h2>
-                        <ul>
-                            {SkillsComplementary.map(({complementary})=> {
+                        <div className="title">
+                            <h2>Dev Tools</h2>
+                        </div>
+                        
+                            <ul>
+                                {DevTools.map(({programmation, icons, width})=> {
                                 return(
-                                    <li>{complementary}</li>
+                                    <li><img src={icons} width={width} alt="another programmation" />{programmation}</li>
                                 )
                             })}
-                        </ul>
-                    </div>
-
-                    <div className="Skillss">
+                            </ul>
+                        </div>
+        
+                        <div className="Skillss">
                         <div className="title">
                             <h2>Creative Tools</h2>
                         </div>
@@ -144,6 +156,19 @@ const Skills = () => {
                             })}
                         </ul>
                     </div>
+
+                    <div className="Skillss">
+                        <h2>Complementary</h2>
+                        <ul>
+                            {SkillsComplementary.map(({complementary})=> {
+                                return(
+                                    <li>{complementary}</li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+
+                
                     </div>
                     
 

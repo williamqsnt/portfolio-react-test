@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import '../App.css';
 import { Body, About, Skills, Projects, Blog, Contact } from '../components'
 import logo from '../assets/icons/logo.png'
-import Carousel from './Carousel'
 
 function App() {
 

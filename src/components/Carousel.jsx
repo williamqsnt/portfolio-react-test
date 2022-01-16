@@ -1,8 +1,4 @@
 import styled from '@emotion/styled'
-import Learn from '../assets/images/Learn.jpg'
-import Homely from '../assets/images/Homely.jpg'
-import Petqo from '../assets/images/Petqo.jpg'
-import Jobsa from '../assets/images/Jobsa.jpg'
 import { useState } from 'react'
 import image1 from '../assets/images/image1.png'
 import backgroundimage from '../assets/images/backgroundimage.png'
@@ -17,7 +13,7 @@ const Carousel = () => {
         <Slider>
          <div className="container">
             <div className="top">
-                <img src={image1} width='550' style={{boxShadow : 'unset'}}/>
+                <img src={image1} width='550' alt="a screen of visual studio code" style={{boxShadow : 'unset'}}/>
             </div>
            <div className="bottom">
                <button onClick={()=> upSlide(false)}>○</button>
