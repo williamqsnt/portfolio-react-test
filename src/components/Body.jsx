@@ -204,10 +204,9 @@ const BodyDiv = styled.div`
     @media (max-width : 600px){
         .Presentation{
             flex-direction : column;
+            height : 90vh;
         }
-        .Presentation h1{
-            
-        }
+     
        
     }
 
