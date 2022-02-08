@@ -50,6 +50,7 @@ export default Blog
 const Content = styled.div`
     .content{
         margin : 1em;
+        width : 100%;
     }
 
     .contentBlog{
