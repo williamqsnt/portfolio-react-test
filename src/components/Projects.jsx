@@ -13,7 +13,6 @@ const Projects = () => {
 
     return(
      <TextContent>
-            <h2 style={{color : '#49F2CA', textAlign : 'center', fontSize : '4em', marginTop : '2em', marginBottom : '1em'}}>PROJECTS</h2>
                    <div className="AllProjects">
                    
                     <div className="eprojects">
