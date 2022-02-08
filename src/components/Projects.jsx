@@ -13,6 +13,9 @@ const Projects = () => {
 
     return(
      <TextContent>
+
+<h2 style={{ color :'#49F2CA', fontSize : '4.5em', marginBottom : '1em', textAlign : 'center', marginTop : '2em'}}>PROJECTS</h2>
+
                    <div className="AllProjects">
                    
                     <div className="eprojects">

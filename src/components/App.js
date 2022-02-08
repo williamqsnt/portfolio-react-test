@@ -104,7 +104,6 @@ function App() {
           <Projects id="projects">
               <div className="allPage">
                   <div className="body">
-                  <h2 style={{ color :'#49F2CA', fontSize : '5em', marginBottom : '1em'}}>PROJECTS</h2>
                       <Project />
                   </div>
               </div>
