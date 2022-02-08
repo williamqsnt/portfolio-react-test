@@ -1,130 +1,56 @@
-
 import styled from '@emotion/styled'
-import Learn from '../assets/images/Learn.jpg'
-import Homely from '../assets/images/Homely.jpg'
-import Petqo from '../assets/images/Petqo.jpg'
-import Jobsa from '../assets/images/Jobsa.jpg'
-
-
-
+import { Learn, Homely, Petqo, Jobsa } from './index'
 
 
 const Projects = () => {
 
-
     const ManyProjects = [
-        {
-            title : 'Learn',
-            background : Learn,
-            alt : 'This is a project called Learn',
-            url : 'https://williamqsnt.github.io/learn-dribbble/'
-
-        },
-        {
-            title : 'Homely',
-            background : Homely,
-            alt : 'This is a project called Homely',
-            url : 'https://williamqsnt.github.io/homely-dribbble/'
-        },
-        {
-            title: 'Petqo',
-            background : Petqo,
-            alt : 'This is a project called Petqo',
-            url : 'https://williamqsnt.github.io/petqo-dribbble/'
-        },
-        {
-            title: 'Jobsa',
-            background : Jobsa,
-            alt : 'This is a project called Jobsa',
-            url : 'https://williamqsnt.github.io/jobsa-dribble/'
-        },
-
+        { title : 'Learn', background : Learn, alt : 'This is a project called Learn', url : 'https://williamqsnt.github.io/learn-dribbble/'},
+        { title : 'Homely', background : Homely, alt : 'This is a project called Homely', url : 'https://williamqsnt.github.io/homely-dribbble/'},
+        { title: 'Petqo', background : Petqo, alt : 'This is a project called Petqo', url : 'https://williamqsnt.github.io/petqo-dribbble/'},
+        { title: 'Jobsa', background : Jobsa, alt : 'This is a project called Jobsa', url : 'https://williamqsnt.github.io/jobsa-dribble/'},
     ]
 
-
-   
-   
-    
-        return(
-
-    
-        <TextContent>
-
-                <div className="AllProjects">
-
-                    <div className="Projects">
-                        <h2>Projects</h2>          
-                    </div>
-
+    return(
+     <TextContent>
+            <h2 style={{color : '#49F2CA', textAlign : 'center', fontSize : '4em', marginTop : '2em', marginBottom : '1em'}}>PROJECTS</h2>
+                   <div className="AllProjects">
+                   
                     <div className="eprojects">
-  
-                    {ManyProjects.map(({title,img, background, url}) => {
-                      
-                        return(
-                            <div className="eachProjects" style={{background: `url(${background})`}}>
+                        {ManyProjects.map(({title,img, background, url}) => {
+                          
+                            return (
                                 
-                                <a href={url} target='_blank' className="eachButton" rel="noreferrer">View the project</a>
-                            </div>
-                        )
-                    })}
+                                    <a href={url} target="_blank" rel="noreferrer">
+
+                                   
+                                    <div className="eachProjects" style={{background: `url(${background})`, backgroundPosition : 'center', backgroundSize : '90%'}}>
+                                        <a href={url} target='_blank' className="eachButton" rel="noreferrer">View</a>
+                                    </div>
+                                    </a>
+                              
+                                
+                            )
+                        })}
                     </div>
                 </div>
+         </TextContent>
+    )
 
 
 
-
-
-            </TextContent>
-        )
-    
-  
 }
-
 
 export default Projects
 
 
+
 const TextContent = styled.div`
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .carousel {
-    padding: 10px 10px 0;
-    border-radius: 4px;
-    width: 375px;
-    margin: auto;
-  }
-  .carousel__main {
-    border-radius: 4px;
-    height: 110px;
-  }
-  
-  .demo-item {
-    height: 110px;
-  }
-  
-    *{
-        background-color : #161E54;
-    }
-    .Projects{
-        margin-top : 2em;
-        display : flex;
-        align-items : center;
-        justify-content : center;
-        background-color : #161E54;
-    }
-    .Projects h2{
-        color : #FF9B6A;
-        font-size : 4em;
-        letter-spacing : 5px;
-        margin-bottom : 1em;
+
+
     
-    }
+ 
     .AllProjects{
-      
         display : flex;
         justify-content : center;
         flex-direction : column;
@@ -139,27 +65,26 @@ const TextContent = styled.div`
         display : flex;
         align-items : center;
         justify-content : center;
-        width : 400px;
+        width : 300px;
         margin : 1em;
-        height : 400px;
-       
+        height : 300px;
         transition : 0.5s;
     }
     .eachProjects:hover{
         cursor : pointer;
         transform : scale(1.05);
         box-shadow : 0 0 0.5em grey;
+    
     }
     .eachProjects a{
         text-decoration : none;
-
     }
     .eachButton{
         display : flex;
         align-items : center;
         justify-content : center;
         border : none;
-        color : transparent;
+        color : black;
         font-size : 1.5em;
         height : 40%;
         width : 40%;
@@ -169,7 +94,7 @@ const TextContent = styled.div`
         display : flex;
         align-items : center;
         justify-content : center;
-        background-color : #FF5151;
+        background-color :   #0A192F;
         border-radius : 50%;
         height : 40%;
         width : 40%;
@@ -178,8 +103,10 @@ const TextContent = styled.div`
         color : white;
         cursor : pointer;
     }
+
+
     @keyframes buttonZoom{
-        from{height : 40%; width : 40%; opacity : 0.8; color : transparent}
-        to{height : 55%; width : 55%; opacity : 0.95; color : white;}
+        from{height : 40%; width : 40%; opacity : 0.8; color : white}
+        to{height : 55%; width : 55%; opacity : 0.95; color : white}
     }
 `

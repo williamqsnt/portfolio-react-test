@@ -1,4 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 vscode://vscode.github-authentication/did-authenticate?windowid=1&code=221006cff471b2505139&state=5b489e2c-5e27-41f4-929c-bc39444c405a
 # dependencies
 /node_modules
