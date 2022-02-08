@@ -88,6 +88,7 @@ const TextContent = styled.div`
         height : 40%;
         width : 40%;
         opacity : 0;
+
     }
     .eachButton:hover{
         display : flex;
@@ -101,6 +102,10 @@ const TextContent = styled.div`
         opacity : 0.8;
         color : white;
         cursor : pointer;
+
+        a{
+            text-decoration : none;
+        }
     }
 
 
